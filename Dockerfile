@@ -23,3 +23,9 @@ RUN git clone https://gitee.com/gitee_fu/easy-tools.git
 # RUN bash easy-tools/setup_and_run.sh
 
 # COPY ./fonts/* /opt/conda/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/
+
+# --- 在这里设置全局环境变量 ---
+ENV http_proxy="http://172.17.171.249:8888"
+ENV https_proxy="http://172.17.171.249:8888"
+ENV no_proxy="localhost,127.0.0.1,harbor.fzu.edu.cn,.fzu.edu.cn,172.16.0.0/12,10.0.0.0/8,192.168.0.0/16"
+# -----------------------------
