@@ -54,6 +54,8 @@ RUN wget -O Miniforge3.sh "https://github.com/conda-forge/miniforge/releases/lat
 ENV UV_HOME="/root/.local"
 ENV PATH="${UV_HOME}/bin:${PATH}"
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh
+RUN ln -s /root/.local/bin/uv /usr/local/bin/uv
+RUN ln -s /root/.local/bin/uvx /usr/local/bin/uvx
 
 # ----------------- 6. 配置软件源和Git -----------------
 RUN pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple && \
